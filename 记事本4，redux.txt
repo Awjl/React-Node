@@ -24,3 +24,18 @@ redux 基础知识
   使用 stort.dispatch 方法传递给组件，内部可以调用修改状态
   Subscribe订阅render函数，每次修改都会重新渲染
   Redux 相关内容，一道单独的文件index.redux.js 单独管理
+
+  处理异步，调试工具，更优雅的和react结合
+  redux 处理异步，需要redux-thunk插件  // 最常用插件
+  安装 npm install redux-thunk --save
+  使用 applyMiddleware 开启thunk中间件
+  action 可以返回函数，使用dispatch 提交 action   在index.js 中开启
+
+  npm install redux-devtools-extension 并且开启  // 调试工具
+  在 谷歌的调试工具
+  在扩展程序中的 redux
+  新建 store的时候 判断 window.devToolsExtension
+  使用compose结合thunk和window.devToolsExtension
+  调试窗的redux选项卡，实时看到state
+
+  使用react-redux优雅的连接react和redux // 库
