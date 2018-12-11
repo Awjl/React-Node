@@ -1,0 +1,19 @@
+redux 基础知识
+
+  redux 是什么
+
+    专注于状态管理，和react解耦
+    单一状态，单向数据流
+    核心概念 store，state, action ,reducer
+    存储（store） 记录（state） 修改（action） 处理变化（reducer）拿到state和action，生成行的state
+
+    使用方法
+    通过reducer 新建store ，随时通过store，getState 获取状态
+    需要状态变更store.dispatch（action）来修改状态
+    Reducer 函数接受state和action，返回新的state，可以用store.subscribe监听每次修改
+
+
+
+  redux 核心概念
+
+  redux 实战

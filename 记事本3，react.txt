@@ -1,0 +1,84 @@
+一  react 基础知识
+    react是什么
+      帮助构建UI的库，专注View层
+      一切皆组件
+      全部都是使用ES6语法
+
+    使用react实现组件化
+    react进阶使用
+基础语法
+  import React
+  class 语法新建组件，render里直接使用
+  render 函数返回值就是输出JSX语法，会把JSX转成js执行
+JXS 基础语法
+  js里直接写html
+  class 要写成className
+  变量用{}包裹即可  渲染变量的方法
+
+
+react 中
+  块一切都是组件
+  对组建间通信通过属性传递
+  类实现组件，使用JSX语法
+
+组件之间的数据传递 props 
+  使用<组件 数据 =“值”> 的形式传递
+  组件内部使用this.props 获取值
+  如果组件只有 render 函数，还可以用函数的形式写组件
+
+
+组件内部通过state 管理状态
+
+  JXS 本质就是JS，所以直接数组map渲染列表
+  Constructur 设置初始状态，记得执行 super(props) 构造函数
+  State 就是一个不可变量的对象，使用this.state获取
+
+  数据渲染模式
+  class One extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state= {
+      solders: ['1', '2', '3']
+    }
+  }
+  render() {
+    return (
+      <div>
+        <h4>一营营长{this.props.data}</h4>
+        <ul>
+          {this.state.solders.map(v => {
+            return <li key= {v}>{v}</li>
+        })}
+        </ul>
+      </div >
+    )
+  }
+事件
+
+onClick点击事件
+  jsx 里，onClick= {this.函数名}来绑定事件
+  this引用的问题，需要在狗仔函数里用bind绑定this
+  this.setState修改state，记得返回新的state，而不是修改
+
+react 生命周期
+react 组件有若干钩子函数，在组件不同的状态执行
+
+  初始化周期 （第一次加载）
+
+  组件重新渲染生命周期  （属性变化）
+
+  组件卸载声明周期  （组件离开的时候）
+
+react 扩展工具
+
+react UI库
+
+antd-mobile 组件库  蚂蚁金服 两个版本  一个移动  一个PC端
+ 官网 beta.mobile.ant.desing/index-cn
+ npm install antd-mobile@next --save 安装最新版
+ cnpm install babel-plugin-import --save 按需加载
+ 常用的一些组件 
+  Layout 布局组件
+  表单组件，数据展示组件，选择器
+  操作组件
+

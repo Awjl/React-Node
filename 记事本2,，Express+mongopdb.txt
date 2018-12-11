@@ -1,0 +1,52 @@
+第一步
+Express 开发接口文档
+非关系型数据库 mongodb
+使用 nodejs 的mongoose 模块连接和操作 mongodb
+第二步
+安装 express 
+npm install express --save
+src  前台
+server 后台
+
+app.get('/', function (req, res) {
+    res.send('<h1>hello word</h1>')
+    // send 返回 html格式
+})
+
+app.get('/data', function (req, res) {
+    res.json({
+        name: "imooc",
+        type: 'it'
+    })
+    // json 返回 json格式数据
+})
+// 使用热更新 npm install -g nodemon   启动  nodemon  名字
+其他特性
+app.get get.post 分别开发get和post 接口
+app.use 使用模块
+代 res.send res.json res.sendfile 响应不同的内容 分别是返回文本  返回json 返回文件
+
+
+mogongdb 
+安装mongoose  npm install mongoose --save 
+使用 mongoose cnnect 链接数据库
+    定义文档模型，Schema和model新建模型
+    String  Number 等数据结构
+    create，remove，update 分别用来增，删，更新数据的操作
+    Find和findOne 用来查询数据
+express 和MongoDB 结合
+    当表多的时候生成文档模型  MongoDB 独立工具函数
+    express 使用 body-parser 支持post参数
+    使用cookie-parser 存储登录信息cookie
+
+顺序
+下载 mongodb
+建立文件夹存储数据
+进入 安装好的mongodb 目录下 bin 文件（使用cmd 进入）
+输入 mongod --dbpath D:\MongoDB\data （数据文件夹）打开后不要关闭
+在打开 cmd 进入 安装好的mongodb 目录下 bin 文件（使用cmd 进入）运行 mongo 本地  远程  mongo 42.114.29.206:27017/log
+
+find, findOne 查找数据
+create 增加数据
+update 更新数据
+Remove 删除数据
